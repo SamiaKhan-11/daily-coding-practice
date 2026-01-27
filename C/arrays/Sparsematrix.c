@@ -1,48 +1,30 @@
 #include<stdio.h>
-#include<stdlib.h>
-#define MAX 100
-typedef struct {
-    int row;
-    int col;
-    int value;
-} Element;
-typedef struct {
-    int rows;
-    int cols;
-    int numElements;
-    Element elements[MAX];
-} SparseMatrix;
-SparseMatrix createSparseMatrix(int rows, int cols, int numElements) {
-    SparseMatrix sm;
-    sm.rows = rows;
-    sm.cols = cols;
-    sm.numElements = numElements;
-    for (int i = 0; i < numElements; i++) {
-        printf("Enter row, column and value for element %d: ", i + 1);
-        scanf("%d %d %d", &sm.elements[i].row, &sm.elements[i].col, &sm.elements[i].value);
-    }
-    return sm;
-}
-void displaySparseMatrix(SparseMatrix sm) {
-    int k = 0;
-    for (int i = 0; i < sm.rows; i++) {
-        for (int j = 0; j < sm.cols; j++) {
-            if (k < sm.numElements && sm.elements[k].row == i && sm.elements[k].col == j) {
-                printf("%d ", sm.elements[k].value);
-                k++;
-            } else {
-                printf("0 ");
+int main(){
+    int a[10][10],SM[3][10],r,c,i,j,k=0,count=0;
+    printf("Number of rows : ");
+    scanf("%d",&r);
+    printf("Number of cols : ");
+    scanf("%d",&c);
+    printf("Enter array elements : ");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+            if(a[i][j]!=0){
+            SM[0][k]=i;
+            SM[1][k]=j;
+            SM[2][k]=a[i][j];
+            k++;
+            count++;
             }
+
+        }
+    }
+    printf("Print the Sparse Matrix : \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<count;j++){
+            printf(" %d ",SM[i][j]);
         }
         printf("\n");
     }
-}
-int main() {
-    int rows, cols, numElements;
-    printf("Enter number of rows, columns and non-zero elements: ");
-    scanf("%d %d %d", &rows, &cols, &numElements);
-    SparseMatrix sm = createSparseMatrix(rows, cols, numElements);
-    printf("The sparse matrix is:\n");
-    displaySparseMatrix(sm);
     return 0;
 }
