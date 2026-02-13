@@ -1,5 +1,5 @@
-# #print hello world message
-# print("Hello World!")
+# # print hello world message
+print("Hello World!")
 
 
 # #swap two numbers
@@ -27,7 +27,7 @@
 # print("mod=",mod)
 
 #to find area of any shape i chose triangle
-base=int(input("Enter base of a triangle : "))
-height=int(input("Enter height of a triangle : "))
-area=1/2*base*height
-print("Area of the triangle",area)
+# base=int(input("Enter base of a triangle : "))
+# height=int(input("Enter height of a triangle : "))
+# area=1/2*base*height
+# print("Area of the triangle",area)

@@ -1,0 +1,11 @@
+
+a=int(input("Enter a number : "))
+b=int(input("Enter a number : "))
+print("Operator", "Explanation        ","     Example")
+print("+","        add left and right       ", " ", (a+b))
+print("-","        substract right from left", " ", (b-a))
+print("*","        multiplication of value s", " ", (a*b))
+print("/","        Division                 ", " ", ( a/b))
+print("//","       Floor Division Operator  ", " ", (a//b))
+print("%","        Modulus                  ", " ", (a%b))
+print("**","       Exponential value        ", " ", (a**b))
