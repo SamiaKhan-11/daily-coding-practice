@@ -24,7 +24,7 @@ public class MoveZero {
         }
         System.out.println("The array elements : ");
         for(i=0;i<n;i++){
-            System.out.println(arr[i]);
+            System.out.print(arr[i] + " ");
         }
 
     }
